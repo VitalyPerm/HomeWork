@@ -1,0 +1,111 @@
+дз:
+1) в чем разница между += и =+? 
+2) разобрать бонус с примером где элвис оператор
+3) Используя when, написать программу в методе main(), которая выводит название месяца по номеру от 1 до 12.
+4) Используя циклы, написать программу, которая выводит на консоль все четные числа от 0 до 100
+5) Написать программу, которая слушает ввод в консоли, складывает вводимые пользователем числа. 
+Если пользователь ввел stop, завершить приложение. 
+Если пользователь вводит некорректные данные - прервать текущую итерацию, начать заново.
+
+
+
+
+
+
+1 Задание:     x = x + 2   И   x += 2   выражения идентичны       =+  -???
+
+
+2 Задание:
+fun handleResponse(response: Response) {
+val resultId = response.id ?: -1L
+}
+
++ бонус к дз, объяснить мне что я добавил во втором случае:
+
+fun handleResponse(response: Response?) {
+val resultId = response?.id ?: -1L
+}
+ 
+ 
+ 3 Задание:
+ 
+
+fun main(args: Array<String>){
+    var number: Int? = null
+number = 7
+
+    when(number) {
+        1 -> println("January")
+        2 -> println("February")
+        3 -> println("March")
+        4 -> println("April")
+        5 -> println("May")
+        6 -> println("June")
+        7 -> println("July")
+        8 -> println("August")
+        9 -> println("Septebmer")
+        10 -> println("OCtober")
+        11 -> println("Novermber")
+        12 -> println("December")
+        else -> println("Not correct number")
+    }}
+    
+    
+    
+4 Задание
+
+fun main(Agrs: Array<String>){
+    for(number in 2..100 step 2)
+        println(number)
+}
+
+
+
+
+5 Задание 
+
+fun main() {
+
+    println("Enter first number")
+    val firstnumber = readLine()!!
+    while(firstnumber == "Stop") {
+        break
+    }
+
+    println("Enter second number")
+    val secondnumber = readLine()!!
+    while(secondnumber == "Stop") {
+        break
+    }
+
+    val result: Int
+
+    try {
+        result = firstnumber.toInt() + secondnumber.toInt()
+        print("The summ is: ")
+        println(result)
+    } catch (e: NumberFormatException) {
+        println("Only numbers allowed")
+    }
+
+    while(firstnumber == "Stop") {
+        break
+    }
+
+}
+
+
+ 
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
