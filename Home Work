@@ -68,29 +68,26 @@ fun main() {
 
     println("Enter first number")
     val firstnumber = readLine()!!
-    while(firstnumber == "Stop") {
+    while(false) {
+        firstnumber.toIntOrNull()
+        continue
+        firstnumber == "Stop"
         break
     }
 
     println("Enter second number")
     val secondnumber = readLine()!!
-    while(secondnumber == "Stop") {
+    while(false) {
+        firstnumber.toIntOrNull()
+        continue
+        secondnumber == "Stop"
         break
     }
 
-    val result: Int
+    val result: Int = firstnumber.toInt() + secondnumber.toInt()
+    print("The summ is: ")
+    println(result)
 
-    try {
-        result = firstnumber.toInt() + secondnumber.toInt()
-        print("The summ is: ")
-        println(result)
-    } catch (e: NumberFormatException) {
-        println("Only numbers allowed")
-    }
-
-    while(firstnumber == "Stop") {
-        break
-    }
 
 }
 
