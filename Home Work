@@ -69,7 +69,7 @@ import kotlin.text.toInt as toInt1
 
 fun main() {
     println("Enter first number")
-    var firstnumber = readLine()!!
+    var firstnumber = readLine()!!.toLowerCase().capitalize()
     if(firstnumber == "Stop"){
         print("Process has been stopped")
     return }
@@ -79,7 +79,7 @@ fun main() {
 
 
     println("Enter first number")
-    var secondnumber = readLine()!!
+    var secondnumber = readLine()!!.toLowerCase().capitalize()
     if(secondnumber == "Stop"){
         print("Process has been stopped")
         return }
@@ -94,6 +94,7 @@ fun main() {
 
 
     }
+
 
 
 
