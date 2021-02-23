@@ -70,7 +70,9 @@ import kotlin.text.toInt as toInt1
 fun main() {
     println("Enter first number")
     var firstnumber = readLine()!!
-    if(firstnumber == "Stop")  return
+    if(firstnumber == "Stop"){
+        print("Process has been stopped")
+    return }
 
 
 
@@ -78,7 +80,9 @@ fun main() {
 
     println("Enter first number")
     var secondnumber = readLine()!!
-    if(secondnumber == "Stop") return
+    if(secondnumber == "Stop"){
+        print("Process has been stopped")
+        return }
 
 
 
@@ -90,7 +94,6 @@ fun main() {
 
 
     }
-
 
 
 
