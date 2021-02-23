@@ -65,32 +65,32 @@ fun main(Agrs: Array<String>){
 
 5 Задание 
 
+import kotlin.text.toInt as toInt1
+
 fun main() {
+    println("Enter first number")
+    var firstnumber = readLine()!!
+    if(firstnumber == "Stop")  return
+
+
+
+
 
     println("Enter first number")
-    val firstnumber = readLine()!!
-    while(false) {
-        firstnumber.toIntOrNull()
-        continue
-        firstnumber == "Stop"
-        break
+    var secondnumber = readLine()!!
+    if(secondnumber == "Stop") return
+
+
+
+
+
+
+    var result = (firstnumber.toInt1() + secondnumber.toInt1())
+    print("Summ is $result")
+
+
     }
 
-    println("Enter second number")
-    val secondnumber = readLine()!!
-    while(false) {
-        firstnumber.toIntOrNull()
-        continue
-        secondnumber == "Stop"
-        break
-    }
-
-    val result: Int = firstnumber.toInt() + secondnumber.toInt()
-    print("The summ is: ")
-    println(result)
-
-
-}
 
 
 
