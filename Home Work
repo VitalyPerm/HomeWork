@@ -66,26 +66,44 @@ fun main(Agrs: Array<String>){
 5 Задание 
 
 import kotlin.text.toInt as toInt1
+import java.lang.Double.parseDouble
+import java.lang.NumberFormatException
 
 fun main() {
+
     println("Enter first number")
-    var firstnumber = readLine()!!.toLowerCase().capitalize()
-    if(firstnumber == "Stop"){
+    val firstnumber = readLine()!!.toLowerCase().capitalize()
+    if (firstnumber == "Stop") {
         print("Process has been stopped")
-    return }
+        return
+    }
+    var numeric = false
+    try {
+        val num = parseDouble(firstnumber)
+
+    } catch (e: NumberFormatException) {
+        numeric = true
+    }
+    if (numeric)
+        println("$firstnumber is not a number") // TODO: 2/24/2021
+    else
+        println("Enter second number")
 
 
 
-
-
-    println("Enter first number")
     var secondnumber = readLine()!!.toLowerCase().capitalize()
     if(secondnumber == "Stop"){
         print("Process has been stopped")
         return }
+    var numeric_2 = false
+    try {
+        val num = parseDouble(secondnumber)
 
-
-
+    } catch (e: NumberFormatException) {
+        numeric_2 = true
+    }
+    if (numeric_2)
+        println("$secondnumber is not a number") // TODO: 2/24/2021
 
 
 
@@ -94,6 +112,10 @@ fun main() {
 
 
     }
+
+
+
+
 
 
 
