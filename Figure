@@ -1,0 +1,49 @@
+package com.example
+
+fun main(args: Array<String>) {
+    val x = Square()
+    val y = Circle()
+    val z = Triangle()
+
+    x.getPlaneType()
+    print("\n")
+    y.getPlaneType()
+    print("\n")
+    z.getPlaneType()
+}
+
+abstract class Figure {
+    private val planeType = "2D" // общее свойство
+    abstract fun getAreaValue(): Double
+
+    open fun getPlaneType() {
+        print(planeType)
+    }
+}
+
+class Square : Figure() {
+    override fun getAreaValue() = 0.0 // todo
+
+    override fun getPlaneType() {
+        print("плоскость квадрата - ")
+        super.getPlaneType()
+    }
+}
+
+class Circle : Figure() {
+    override fun getAreaValue() = 0.0 // todo
+
+    override fun getPlaneType() {
+        print("плоскость круга - ")
+        super.getPlaneType()
+    }
+}
+
+class Triangle : Figure() {
+    override fun getAreaValue() = 0.0 // todo
+
+    override fun getPlaneType() {
+        print("плоскость треугольник - ")
+        super.getPlaneType()
+    }
+}
