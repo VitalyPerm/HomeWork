@@ -1,0 +1,39 @@
+open class User(
+    var id: Long = 1L,
+    var platform: String = "",
+    var isAdmin: Boolean = false,
+    var name: String = "",
+    var adminPass: String = "",
+    var clientSimplePass: String = "", ) {
+
+    fun isPasswordCorrect(value: String) { }
+    fun showId(id: Long) = println(id)
+    fun showPlatfromType(platform: String) {println(platform)}
+    fun showName(name: String){println(name)}
+}
+
+open class Admin(id: Long, platform: String, isAdmin: Boolean, name: String, clientSimplePass: String):User(
+    id = 2L,
+    platform = "iOS",
+    isAdmin = true,
+    name = "Vitalya",
+    adminPass = "Hello World",
+)
+open class AndoroidClient(id: Long, platform: String, name: String, clientSimplePass: String):Admin(
+    id = 3L,
+    platform = "Android",
+    isAdmin = false,
+    name = "client",
+    clientSimplePass = "12345"
+)
+class casual():AndoroidClient(
+    id = 4L,
+    platform = "iOS",
+    name = "Casual",
+    clientSimplePass = "11111",
+)
+
+fun main (args: Array<String>){
+    User.showId()
+    
+}
