@@ -1,39 +1,30 @@
-open class User(
-    var id: Long = 1L,
-    var platform: String = "",
-    var isAdmin: Boolean = false,
-    var name: String = "",
-    var adminPass: String = "",
-    var clientSimplePass: String = "", ) {
+open class User(var id: Int, var platform: String,var isAdmin: Boolean,var name: String,var clientSimplePass: String){
+    fun showId() = print("Id is $id, ")
+    fun showPlatformType() = print("Platform is $platform, ")
+    fun showName() = print("Name is $name, ")
+    fun isPasswordCorrect () {
+        if(clientSimplePass != "123") println("Error") else println("password is correct")
 
-    fun isPasswordCorrect(value: String) { }
-    fun showId(id: Long) = println(id)
-    fun showPlatfromType(platform: String) {println(platform)}
-    fun showName(name: String){println(name)}
+    }
+    open class AndroidClient
+        (id: Int, platform: String, isAdmin: Boolean, name: String, clientSimplePass: String, var adminPass: String):
+        User(id = 2, platform = "iOS", false, "Client","1234")
+
+    class Admin():AndroidClient(id = 3, platform = "Android", true, "Vasya","","12345")
+
+    class Casual():AndroidClient(4,"iOS",false,"John","1111","")
+
+
 }
 
-open class Admin(id: Long, platform: String, isAdmin: Boolean, name: String, clientSimplePass: String):User(
-    id = 2L,
-    platform = "iOS",
-    isAdmin = true,
-    name = "Vitalya",
-    adminPass = "Hello World",
-)
-open class AndoroidClient(id: Long, platform: String, name: String, clientSimplePass: String):Admin(
-    id = 3L,
-    platform = "Android",
-    isAdmin = false,
-    name = "client",
-    clientSimplePass = "12345"
-)
-class casual():AndoroidClient(
-    id = 4L,
-    platform = "iOS",
-    name = "Casual",
-    clientSimplePass = "11111",
-)
 
-fun main (args: Array<String>){
-    User.showId()
-    
+fun main() {val User = User(id = 1, platform = "Android", isAdmin = false, name = "User", clientSimplePass = "123")
+    print("User"); User.showId()
+    print("User"); User.showPlatformType()
+    print("User"); User.showName()
+    println("")
+
+    User.isPasswordCorrect()
+
+
 }
