@@ -24,5 +24,7 @@ fun main() {
     println("It was ${number.toList()}")
     number.bubbleSort()
     println("It become ${number.toList()}")
+    number.sort()
+    print("Another east way to sort: ${number.toList()}")
 
 }
