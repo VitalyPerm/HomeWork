@@ -1,0 +1,28 @@
+fun IntArray.swap(index1: Int, index2: Int){
+    val buffer = this[index1]
+    this[index1] = this[index2]
+    this[index2] = buffer
+}
+
+fun IntArray.bubbleSort(){
+    var sorted = false
+    while(!sorted){
+        sorted = true
+        for(i in 1 until this.size){
+            val previous = this[i - 1]
+            val current = this[i]
+            if(previous > current) {
+                this.swap(i - 1, i)
+                sorted = false
+            }
+        }
+    }
+}
+
+fun main() {
+    val number = intArrayOf(9, 7, 6, 5, 8, 2, 55, 21, 3, 1, 4, 10, 22, 11, 44)
+    println("It was ${number.toList()}")
+    number.bubbleSort()
+    println("It become ${number.toList()}")
+
+}
