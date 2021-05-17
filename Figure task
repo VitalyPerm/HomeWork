@@ -1,3 +1,7 @@
+//Создать фигуры от абстрактного класса, вывести площад и тип плоскости
+
+
+
 abstract class Figure {
     private val planeType = "2D" + "\n" // общее свойство
     abstract fun getAreaValue(sideLenght: Double, sideLenght_2: Double): Double
