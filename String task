@@ -1,0 +1,67 @@
+/* 
+Задание: Дана строка, просто буквы. Внутри нее найти самую длинную подстроку, в которой символы не повторяются. Примеры:
+
+Example 1:
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3.
+
+Example 2:
+Input: s = "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+
+Example 3:
+Input: s = "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
+Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+
+Example 4:
+Input: s = ""
+Output: 0
+ */
+
+
+
+fun lenght(a: CharArray):Int {
+    var counter = 1
+    var size = a.size
+    if(size >= 2 && a[1] != a[0]){counter ++}
+    if(size >= 3 && a[2] != a[1]){counter ++}
+    if(size >= 4 && a[3] != a[2]){counter ++}
+    if(size >= 5 && a[4] != a[3]){counter ++}
+    if(size >= 6 && a[5] != a[4]){counter ++}
+    if(size >= 7 && a[6] != a[5]){counter ++}
+    if(size >= 8 && a[7] != a[6]){counter ++}
+    if(size >= 9 && a[8] != a[7]){counter ++}
+    if(size >= 10 && a[9] != a[8]){counter ++}
+    return counter
+}
+
+fun letters(a: CharArray):Array<Char>{
+    val letter = arrayOf(' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ')
+    var size = a.size
+    if(size >= 2 && a[1] != a[0]){letter[0] = a[0]; letter[1] = a[1]}
+    if(size >= 3 && a[2] != a[1]){letter[2] = a [2]}
+    if(size >= 4 && a[3] != a[2]){letter[3] = a [3]}
+    if(size >= 5 && a[4] != a[3]){letter[4] = a [4]}
+    if(size >= 6 && a[5] != a[4]){letter[5] = a [5]}
+    if(size >= 7 && a[6] != a[5]){letter[6] = a [6]}
+    if(size >= 8 && a[7] != a[6]){letter[7] = a [7]}
+    if(size >= 9 && a[8] != a[7]){letter[8] = a [8]}
+    if(size >= 10 && a[9] != a[8]){letter[9] = a [9]}
+    return letter
+}
+
+fun main(args: Array<String>) {
+    val input = "aderrr"
+    var lenght = lenght(input.toCharArray())
+    var string = letters(input.toCharArray())
+    print("The answer is ")
+    for (i in string){
+        print(i)
+    }
+    print("\n")
+    print("With the lenght of $lenght")
+}
